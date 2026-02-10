@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Физические законы – 7–9 классы</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Физические законы 7–9 классов</h1>
+    <p>Главная страница с формулами. Выбери карточку или найди закон через поиск, чтобы открыть страницу с GIF, объяснением и формулой.</p>
+  </header>
+
+  <main>
+    <!-- Главная -->
+    <section id="page-home" class="page active">
+      <h2 class="home-title">Справочник формул</h2>
+      <p class="home-subtitle">
+        Содержит формулы по механике, тепловым и электрическим явлениям для 7–9 классов.
+      </p>
+
+      <div class="filters">
+        <label>
+          Класс:
+          <select id="filter-grade">
+            <option value="all">Все</option>
+            <option value="7">7 класс</option>
+            <option value="8">8 класс</option>
+            <option value="9">9 класс</option>
+          </select>
+        </label>
+        <label>
+          Раздел:
+          <select id="filter-chapter">
+            <option value="all">Все</option>
+            <option value="измерения">Измерения</option>
+            <option value="механика">Механика</option>
+            <option value="давление">Давление</option>
+            <option value="тепловые явления">Тепловые явления</option>
+            <option value="электричество">Электричество</option>
+          </select>
+        </label>
+        <label>
+          Поиск:
+          <input
+            id="filter-search"
+            type="text"
+            placeholder="Название (например, «Закон Архимеда»)"
+          />
+        </label>
+      </div>
+
+      <div class="columns">
+        <div class="column" id="col-7">
+          <h3 class="column-title">7 класс</h3>
+          <div id="cards-7" class="cards"></div>
+        </div>
+        <div class="column" id="col-8">
+          <h3 class="column-title">8 класс</h3>
+          <div id="cards-8" class="cards"></div>
+        </div>
+        <div class="column" id="col-9">
+          <h3 class="column-title">9 класс</h3>
+          <div id="cards-9" class="cards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Страница конкретного закона -->
+    <section id="page-law" class="page">
+      <button class="back-btn" id="back-btn">← Назад на главную</button>
+
+      <div class="law-header">
+        <h2 id="law-title"></h2>
+        <div id="law-meta"></div>
+      </div>
+
+      <div class="law-layout">
+        <div>
+          <div class="section">
+            <h3>Объяснение</h3>
+            <p id="law-explanation"></p>
+          </div>
+
+          <div class="section">
+            <h3>Формула</h3>
+            <div class="formula">
+              <span id="law-formula"></span>
+              <small id="law-formula-desc"></small>
+            </div>
+          </div>
+        </div>
+
+        <div class="gif-block">
+          <h3>GIF-визуализация</h3>
+          <img id="law-gif" src="" alt="Визуализация закона (GIF)" />
+          <p id="law-gif-caption"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="script.js"></script>
+
+
+</body>
+</html>
